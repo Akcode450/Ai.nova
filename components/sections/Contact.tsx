@@ -60,7 +60,7 @@ export default function Contact() {
                 <div>
                   <p className="text-white">Phone</p>
                   <span className="text-slate-400">
-                    +994 XX XXX XX XX
+                    +98 910 055 5308
                   </span>
                 </div>
 
@@ -75,7 +75,7 @@ export default function Contact() {
                 <div>
                   <p className="text-white">Location</p>
                   <span className="text-slate-400">
-                    Azerbaijan
+                    ایران/ قم
                   </span>
                 </div>
 
