@@ -6,6 +6,7 @@ import Portfolio from "@/components/sections/Portfolio";
 import Process from "@/components/sections/Process";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
+import Contact from "@/components/sections/Contact";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/sections/Footer";
 import ScrollProgress from "@/components/ui/ScrollProgress";

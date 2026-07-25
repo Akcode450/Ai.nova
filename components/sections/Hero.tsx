@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Container from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
@@ -87,14 +87,23 @@ export default function Hero() {
               </p>
 
               <div className="mt-12 flex flex-wrap justify-end gap-4">
-                <Button size="lg">
-                  شروع پروژه
-                </Button>
+                <button
+  onClick={() => alert("Button Works")}
+  className="rounded-xl bg-cyan-500 px-8 py-4 font-bold text-black hover:bg-cyan-400 transition"
+>
+  شروع پروژه
+</button>
 
-                <Button
+                                <Button
                   variant="outline"
                   size="lg"
                   className="border-white/15 bg-white/5 text-white hover:bg-white/10"
+                  onClick={() =>
+                    document.getElementById("portfolio")?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }
                 >
                   مشاهده نمونه‌کارها
                 </Button>
