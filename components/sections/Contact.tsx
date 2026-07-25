@@ -60,7 +60,7 @@ export default function Contact() {
                 <div>
                   <p className="text-white">Phone</p>
                   <span className="text-slate-400">
-                    0910 055 5308
+                    5308 055 0910
                   </span>
                 </div>
 
