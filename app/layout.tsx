@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Vazirmatn, Geist } from "next/font/google";
-import "./globals.css";
+import { Geist, Vazirmatn } from "next/font/google";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const vazirmatn = Vazirmatn({
   subsets: ["arabic"],
@@ -20,14 +23,18 @@ export const metadata: Metadata = {
   },
 
   description:
-    "طراحی سایت، هوش مصنوعی و توسعه نرم‌افزار برای کسب‌وکارهای مدرن.",
+    "طراحی و توسعه سیستم‌های هوش مصنوعی، AI Agent، اتوماسیون سازمانی، داشبوردهای مدیریتی و وب‌اپلیکیشن‌های مدرن.",
 
   keywords: [
-    "هوش مصنوعی",
-    "طراحی سایت",
+    "AI",
+    "Artificial Intelligence",
+    "AI Agent",
+    "Automation",
     "Next.js",
     "React",
-    "AI",
+    "هوش مصنوعی",
+    "اتوماسیون",
+    "طراحی سایت",
   ],
 
   authors: [
@@ -37,10 +44,28 @@ export const metadata: Metadata = {
   ],
 
   creator: "AK Code",
+  publisher: "AK Code",
 
   robots: {
     index: true,
     follow: true,
+  },
+
+  openGraph: {
+    title: "AI Nova",
+    description:
+      "AI Development Studio - طراحی سیستم‌های هوش مصنوعی و نرم‌افزارهای نسل جدید",
+    url: "https://akcode.dev",
+    siteName: "AI Nova",
+    locale: "fa_IR",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Nova",
+    description:
+      "AI Development Studio",
   },
 };
 
@@ -54,9 +79,16 @@ export default function RootLayout({
       lang="fa"
       dir="rtl"
       suppressHydrationWarning
-      className={cn("font-sans", geist.variable)}
+      className={cn(geist.variable, vazirmatn.variable)}
     >
-      <body>{children}</body>
+      <body
+        className={cn(
+          "min-h-screen bg-[#050816] text-white antialiased",
+          "font-vazirmatn"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
