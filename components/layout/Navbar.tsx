@@ -45,7 +45,17 @@ export default function Navbar() {
             ))}
           </div>
 
-          <Button>شروع پروژه</Button>
+          <Button
+            className="bg-cyan-500 text-black hover:bg-cyan-400"
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+          >
+            شروع پروژه
+          </Button>
         </nav>
       </Container>
     </header>
