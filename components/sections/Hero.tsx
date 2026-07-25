@@ -87,26 +87,26 @@ export default function Hero() {
               </p>
 
               <div className="mt-12 flex flex-wrap justify-end gap-4">
-                <button
-  onClick={() => alert("Button Works")}
-  className="rounded-xl bg-cyan-500 px-8 py-4 font-bold text-black hover:bg-cyan-400 transition"
->
-  شروع پروژه
-</button>
 
-                                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white/15 bg-white/5 text-white hover:bg-white/10"
-                  onClick={() =>
-                    document.getElementById("portfolio")?.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    })
-                  }
-                >
-                  مشاهده نمونه‌کارها
-                </Button>
+                <Link href="#contact">
+                  <Button
+                    size="lg"
+                    className="bg-cyan-500 text-black hover:bg-cyan-400"
+                  >
+                    شروع پروژه
+                  </Button>
+                </Link>
+
+                <Link href="#portfolio">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white/15 bg-white/5 text-white hover:bg-white/10"
+                  >
+                    مشاهده نمونه‌کارها
+                  </Button>
+                </Link>
+
               </div>
                             <div className="mt-10 flex items-center justify-end gap-10 text-sm text-slate-500">
 
