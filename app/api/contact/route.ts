@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const { name, email, company, message } = body;
+    const { name, email, phone, company, message } = body;
 
     const { error } = await resend.emails.send({
       from: "AI Nova <onboarding@resend.dev>",
@@ -19,6 +19,8 @@ export async function POST(request: Request) {
         <p><strong>Name:</strong> ${name}</p>
 
         <p><strong>Email:</strong> ${email}</p>
+
+        <p><strong>Phone:</strong> ${phone}</p>
 
         <p><strong>Company:</strong> ${company}</p>
 

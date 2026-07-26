@@ -11,6 +11,7 @@ export default function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
     message: "",
   });
@@ -40,6 +41,7 @@ export default function Contact() {
       setForm({
         name: "",
         email: "",
+        phone: "",
         company: "",
         message: "",
       });
@@ -149,6 +151,19 @@ export default function Contact() {
                 className="w-full rounded-2xl border border-white/10 bg-[#0b1225] px-5 py-4 text-white outline-none transition focus:border-cyan-400"
                 required
               />
+              
+                <input
+                type="tel"
+                placeholder="شماره تماس"
+                value={form.phone}
+                onChange={(e) =>
+                    setForm({ ...form, phone: e.target.value })
+                }
+                dir="ltr"
+                className="w-full rounded-2xl border border-white/10 bg-[#0b1225] px-5 py-4 text-white outline-none transition focus:border-cyan-400"
+                style={{ textAlign: "right" }}
+                required
+                />
 
               <input
                 type="text"
