@@ -15,8 +15,10 @@ export default function Contact() {
     message: "",
   });
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    console.log("FORM SUBMITTED");
 
     setLoading(true);
 
